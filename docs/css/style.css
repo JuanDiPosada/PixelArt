@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
 
-/* Fuente principal */
 .agbalumo-regular {
   font-family: "Agbalumo", system-ui;
   font-weight: 400;
@@ -14,17 +13,25 @@ a {
   font-family: "Agbalumo", system-ui;
 }
 
-.espacio > li {
+.espacio>li {
   margin: 10px 0px;
 }
 
-li > img {
+li>img {
   width: 40px;
 }
 
-.rojo { color: #FF0000; }
-.azul { color: #00DDFF; }
-.bg-btn { color: #fff; }
+.rojo {
+  color: #FF0000;
+}
+
+.azul {
+  color: #00DDFF;
+}
+
+.bg-btn {
+  color: #fff;
+}
 
 h1 {
   font-size: 80px;
@@ -46,16 +53,16 @@ body {
   background-color: #000;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 20px 5px;
   min-height: 100vh;
   max-width: 100%;
-  overflow-x: hidden;
 }
 
 /* 🧱 HEADER */
 .header {
-  /* Quitar imágenes rotas */
-  background-color: transparent;
+  background: url('https://i.imgur.com/6d4g6Ad.png') no-repeat top left,
+    url('https://i.imgur.com/Fq3NZek.png') no-repeat top right;
+  background-size: 150px;
   padding: 80px 20px 40px;
   max-width: 1200px;
   margin: 0 auto;
@@ -75,16 +82,13 @@ body {
 }
 
 /* 🛒 CATÁLOGO */
+
 .catalogo {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 20px 10px;
   margin-top: 40px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 15px;
 }
 
 .producto {
@@ -92,6 +96,7 @@ body {
   color: #000;
   border-radius: 10px;
   width: 200px;
+  height: 230px;
   padding: 20px;
   transition: transform 0.3s ease;
 }
@@ -100,10 +105,14 @@ body {
   transform: scale(1.05);
 }
 
-.producto img {
-  width: 100px;
-  height: auto;
-  margin-bottom: 10px;
+.img_producto {
+  margin: 0px 5px;
+  height: 65%;
+  background: gainsboro no-repeat;
+  background-size: contain;
+  /* Escala la imagen para que quepa completa */
+  background-position: center;
+  /* Centra la imagen */
 }
 
 .producto h3 {
@@ -119,17 +128,8 @@ body {
 /* 📱 RESPONSIVO */
 @media (max-width: 600px) {
   .header {
+    background-size: 80px;
     padding-top: 60px;
-  }
-
-  .catalogo {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navbar {
-    flex-direction: column;
-    gap: 15px;
   }
 
   .buttons {
@@ -143,9 +143,9 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: black;
-  padding: 15px 30px;
+  padding: 15px 0px;
   border-radius: 20px;
-  max-width: 100%;
+  width: 100%;
   flex-wrap: wrap;
   gap: 10px;
 }
@@ -178,11 +178,13 @@ body {
   flex-wrap: wrap;
 }
 
+/* ✅ Sin tocar la forma original del botón */
 .custom-select,
 .contact-button {
   padding: 8px 16px;
   border: none;
   border-radius: 6px;
+  /* <- valor suave, cambia a 0 si lo tenías recto */
   font-weight: bold;
   background-color: white;
   color: black;
@@ -190,6 +192,7 @@ body {
   font-family: inherit;
 }
 
+/* Estilo visual para select */
 .custom-select {
   appearance: none;
   -webkit-appearance: none;
@@ -223,6 +226,7 @@ body {
   text-align: left;
 }
 
+/* 🎯 Borde vertical solo en pantallas grandes */
 .bordered {
   border-left: 2px solid white;
   border-right: 2px solid white;
@@ -250,61 +254,72 @@ body {
   object-fit: contain;
 }
 
-/* Responsivo: 1 columna por fila */
+/* Mision, vision y objetivos */
+
+.nosotros {
+  width: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  h2 {
+    text-align: left;
+  }
+}
+
+
+/* Responsivo: 1 columna por fila en pantallas pequeñas */
 @media (max-width: 768px) {
   .info-grid {
     grid-template-columns: 1fr;
   }
 
+  .custom-select {
+    width: 80px;
+  }
+
+  .custom-select,
+  .contact-button {
+    padding: 8px 2px;
+    text-align: center;
+
+  }
+
   .bordered {
-    border: none;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px 0;
     padding-left: 0;
   }
-}
 
-/* Misión / Visión / Objetivos */
-.vision-content,
-.mision-content,
-.page-content {
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 0 20px;
-  text-align: center;
-}
+  .producto {
+    padding: 10px 1px;
+    width: 160px;
 
-.vision-content h1,
-.mision-content h1,
-.page-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.vision-content h2,
-.mision-content h2 {
-  font-size: 1.2rem;
-  text-align: left;
-  line-height: 1.6;
-  font-weight: normal;
-}
-
-.objetivos-list {
-  list-style: decimal inside;
-  text-align: left;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  padding-left: 0;
-}
-
-@media (max-width: 600px) {
-  .vision-content h1,
-  .mision-content h1,
-  .page-content h1 {
-    font-size: 2rem;
   }
 
-  .vision-content h2,
-  .mision-content h2,
-  .objetivos-list {
-    font-size: 1rem;
+  .catalogo {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .producto img {
+    width: 140px;
+  }
+
+  .producto h3 {
+    font-size: 0.9rem;
+  }
+
+  .producto p {
+    font-size: 0.9rem;
+  }
+
+  .nosotros {
+    width: auto;
   }
 }
+
+
+/* 
+movil
+
+*/
