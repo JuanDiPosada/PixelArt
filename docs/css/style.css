@@ -60,8 +60,7 @@ body {
 
 /* 🧱 HEADER */
 .header {
-  background: url('https://i.imgur.com/6d4g6Ad.png') no-repeat top left,
-    url('https://i.imgur.com/Fq3NZek.png') no-repeat top right;
+  background: no-repeat top right;
   background-size: 150px;
   padding: 80px 20px 40px;
   max-width: 1200px;
