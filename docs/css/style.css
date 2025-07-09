@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
 
+/* Fuente principal */
 .agbalumo-regular {
   font-family: "Agbalumo", system-ui;
   font-weight: 400;
@@ -53,9 +54,8 @@ body {
 
 /* 🧱 HEADER */
 .header {
-  background: url('https://i.imgur.com/6d4g6Ad.png') no-repeat top left,
-              url('https://i.imgur.com/Fq3NZek.png') no-repeat top right;
-  background-size: 150px;
+  /* Quitar imágenes rotas */
+  background-color: transparent;
   padding: 80px 20px 40px;
   max-width: 1200px;
   margin: 0 auto;
@@ -119,7 +119,6 @@ body {
 /* 📱 RESPONSIVO */
 @media (max-width: 600px) {
   .header {
-    background-size: 80px;
     padding-top: 60px;
   }
 
@@ -179,12 +178,11 @@ body {
   flex-wrap: wrap;
 }
 
-/* ✅ Sin tocar la forma original del botón */
 .custom-select,
 .contact-button {
   padding: 8px 16px;
   border: none;
-  border-radius: 6px; /* <- valor suave, cambia a 0 si lo tenías recto */
+  border-radius: 6px;
   font-weight: bold;
   background-color: white;
   color: black;
@@ -192,7 +190,6 @@ body {
   font-family: inherit;
 }
 
-/* Estilo visual para select */
 .custom-select {
   appearance: none;
   -webkit-appearance: none;
@@ -209,6 +206,7 @@ body {
 .contact-button:focus {
   outline: none;
 }
+
 /* 🧱 GRID contenedor principal */
 .info-grid {
   display: grid;
@@ -225,7 +223,6 @@ body {
   text-align: left;
 }
 
-/* 🎯 Borde vertical solo en pantallas grandes */
 .bordered {
   border-left: 2px solid white;
   border-right: 2px solid white;
@@ -253,7 +250,7 @@ body {
   object-fit: contain;
 }
 
-/* Responsivo: 1 columna por fila en pantallas pequeñas */
+/* Responsivo: 1 columna por fila */
 @media (max-width: 768px) {
   .info-grid {
     grid-template-columns: 1fr;
@@ -265,72 +262,9 @@ body {
   }
 }
 
-/* Contenedor del contenido de Visión */
-.vision-content {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 0 20px;
-  text-align: center;
-}
-
-/* Título principal */
-.vision-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-/* Subtítulo / descripción */
-.vision-content h2 {
-  font-size: 1.2rem;
-  text-align: left;
-  line-height: 1.6;
-  font-weight: normal;
-}
-
-/* Responsivo */
-@media (max-width: 600px) {
-  .vision-content h1 {
-    font-size: 2rem;
-  }
-
-  .vision-content h2 {
-    font-size: 1rem;
-  }
-}
-
-/* Contenedor general para misión/visión/objetivos */
-.mision-content {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.mision-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.mision-content h2 {
-  font-size: 1.2rem;
-  text-align: left;
-  line-height: 1.6;
-  font-weight: normal;
-}
-
-/* Responsivo */
-@media (max-width: 600px) {
-  .mision-content h1 {
-    font-size: 2rem;
-  }
-
-  .mision-content h2 {
-    font-size: 1rem;
-  }
-}
-
-
-/* Contenido general reutilizable */
+/* Misión / Visión / Objetivos */
+.vision-content,
+.mision-content,
 .page-content {
   max-width: 700px;
   margin: 40px auto;
@@ -338,12 +272,21 @@ body {
   text-align: center;
 }
 
+.vision-content h1,
+.mision-content h1,
 .page-content h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-/* Lista de objetivos */
+.vision-content h2,
+.mision-content h2 {
+  font-size: 1.2rem;
+  text-align: left;
+  line-height: 1.6;
+  font-weight: normal;
+}
+
 .objetivos-list {
   list-style: decimal inside;
   text-align: left;
@@ -352,14 +295,16 @@ body {
   padding-left: 0;
 }
 
-/* Responsivo */
 @media (max-width: 600px) {
+  .vision-content h1,
+  .mision-content h1,
   .page-content h1 {
     font-size: 2rem;
   }
 
+  .vision-content h2,
+  .mision-content h2,
   .objetivos-list {
     font-size: 1rem;
   }
 }
-
