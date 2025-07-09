@@ -264,3 +264,102 @@ body {
     padding-left: 0;
   }
 }
+
+/* Contenedor del contenido de Visión */
+.vision-content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* Título principal */
+.vision-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Subtítulo / descripción */
+.vision-content h2 {
+  font-size: 1.2rem;
+  text-align: left;
+  line-height: 1.6;
+  font-weight: normal;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .vision-content h1 {
+    font-size: 2rem;
+  }
+
+  .vision-content h2 {
+    font-size: 1rem;
+  }
+}
+
+/* Contenedor general para misión/visión/objetivos */
+.mision-content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.mision-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.mision-content h2 {
+  font-size: 1.2rem;
+  text-align: left;
+  line-height: 1.6;
+  font-weight: normal;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .mision-content h1 {
+    font-size: 2rem;
+  }
+
+  .mision-content h2 {
+    font-size: 1rem;
+  }
+}
+
+
+/* Contenido general reutilizable */
+.page-content {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.page-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Lista de objetivos */
+.objetivos-list {
+  list-style: decimal inside;
+  text-align: left;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  padding-left: 0;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .page-content h1 {
+    font-size: 2rem;
+  }
+
+  .objetivos-list {
+    font-size: 1rem;
+  }
+}
+
